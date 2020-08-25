@@ -3,6 +3,15 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import $ from 'jquery';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+import './interview-practice-style.css';
+
+function Bold(props){
+    return (
+        <span style={{fontWeight: 'bold'}}>{props.children}</span>
+    )
+}
 
 function Intro1(props){
     return([
@@ -16,16 +25,16 @@ function Intro2(props) {
         <p key="intro2P1">You will be shown a series of commmon interview questions. For each one, you will have  30 seconds to consider your response 
         and then you will have 3 minutes to give your response.</p>,
 
-        <p key="intro2P2">After answering the question, you will be asked to self-evaluate your response as <span className='boldThis'>Excellent</span>, <span className='boldThis'>Good</span>, or <span className='boldThis'>Fair</span>. 
+        <p key="intro2P2">After answering the question, you will be asked to self-evaluate your response as <Bold>Excellent</Bold>, <Bold>Good</Bold>, or <Bold>Fair</Bold>. 
         <i>Tip: record your response on a microphone and play it back to yourself afterwards!</i></p>,
 
-        <p key="intro2P3">If you rate your response as <span className='boldThis'>Excellent</span>, the question will not be shown to you again.</p>,
+        <p key="intro2P3">If you rate your response as <Bold>Excellent</Bold>, the question will not be shown to you again.</p>,
 
-        <p key="intro2P4">If you rate your response as <span className='boldThis'>Good</span>, you will be less likely to see the question again.</p>,
+        <p key="intro2P4">If you rate your response as <Bold>Good</Bold>, you will be less likely to see the question again.</p>,
 
-        <p key="intro2P5">If you rate your response as <span className='boldThis'>Fair</span>, you will be more likely to see the question again.</p>,
+        <p key="intro2P5">If you rate your response as <Bold>Fair</Bold>, you will be more likely to see the question again.</p>,
 
-        <p key="intro2P6">Click <span className='boldThis'>Continue</span> to try the first question!</p>
+        <p key="intro2P6">Click <Bold>Continue</Bold> to try the first question!</p>
     ])
 }
 
@@ -33,7 +42,7 @@ function DisplayQuestion(props){
     return [
         <p key="reviewP1">{props.prompt}</p>,
         <p key="question">
-            <span className='boldThis'>{props.cq}</span>
+            <Bold>{props.cq}</Bold>
         </p>
     ];
 }
@@ -41,17 +50,17 @@ function DisplayQuestion(props){
 function ShowProgress(props) {
     return (
         [
-            <p key="resultsP1"><span className='boldThis'>Fair:</span></p>,
+            <p key="resultsP1"><Bold>Fair:</Bold></p>,
             <ul key="fair">
                 {props.fair.map((val, index) => {return <li key={index}>{val}</li>})}
             </ul>,
 
-            <p key="resultsP2"><span className='boldThis'>Good:</span></p>,
+            <p key="resultsP2"><Bold>Good:</Bold></p>,
             <ul key="good">
                 {props.good.map((val, index) => {return <li key={index}>{val}</li>})}
             </ul>,
 
-            <p key="resultsP3"><span className='boldThis'>Excellent:</span></p>,
+            <p key="resultsP3"><Bold>Excellent:</Bold></p>,
             <ul key="excellent">
                 {props.excellent.map((val, index) => {return <li key={index}>{val}</li>})}
             </ul>,

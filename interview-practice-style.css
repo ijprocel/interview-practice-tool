@@ -1,0 +1,40 @@
+#questionEnclosure{
+    background-color: white;
+    border: solid;
+    margin-top: 10px;
+}
+
+#STARreminder{
+    justify-content: space-between;
+    background-color: lightblue;
+    overflow:hidden;
+}
+
+#textbox {
+    background-color: pink;
+    text-align: left;
+    border-radius: 5px;
+    overflow: auto;
+    padding: 10px;
+}
+
+#PBbackground {
+    background-color:lightblue;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#progressBar {
+    background-color: blue;
+    border-radius: 10px;
+}
+
+ul{
+    padding-right:0;
+    margin-right: 0;
+}
+
+span.STAR{
+    padding-right: 5px;
+    font-size: x-large;
+}
